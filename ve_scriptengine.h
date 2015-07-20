@@ -13,6 +13,9 @@ namespace VeinEvent
   //class ComponentEvent;
   class NetworkEvent;
 
+  /**
+   * @todo Redesign script functionality entirely
+   */
   class VEINEVENTSHARED_EXPORT AbstractScriptEngine : public EventSystem
   {
     Q_OBJECT

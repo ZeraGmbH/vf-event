@@ -36,6 +36,7 @@ namespace VeinEvent
     /**
      * @brief Sets up the list of EventSystem
      *
+     * @todo need add/remove function to allow more dynamic insertation of EventSystem instances
      * @warning the EventHandler is not responsible for deleting subsystems
      */
     void setSubsystems(QList<EventSystem*> t_subsystems);

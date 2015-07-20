@@ -17,8 +17,8 @@ namespace VeinEvent
     virtual ~EventData() {}
 
     enum class EventOrigin : qint8 {
-      EO_LOCAL = 0,
-      EO_FOREIGN = 1
+      EO_LOCAL = 0, /**< the event is from the local system and generally trustworthy */
+      EO_FOREIGN = 1 /**< the event is from a remote client or generally untrustworthy */
     };
 
     EventOrigin eventOrigin() const;
@@ -68,6 +68,9 @@ namespace VeinEvent
      */
     EventTarget m_eventTarget;
 
+    /**
+     * @brief the id of the relevant entity
+     */
     int m_entityId = -1;
   };
 } // namespace VeinEvent
