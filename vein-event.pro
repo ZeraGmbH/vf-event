@@ -22,8 +22,6 @@ exists( ../../project-paths.pri ) {
   include(../../project-paths.pri)
 }
 
-QT += qml
-
 TARGET = vein-event
 
 DEFINES += VEINEVENT_LIBRARY
