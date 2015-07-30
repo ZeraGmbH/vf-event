@@ -56,6 +56,8 @@ namespace VeinEvent
     virtual const QHash<QString, QVariant> *getEntityDataCopy(int t_entityId) const =0; ///< @todo check if this function violates the class enclosure
     virtual bool hasEntity(int t_entityId) const =0;
 
+    virtual QList<int> getEntityList() const =0;
+
     /**
      * @brief Causes a StorageType specific dump of the storage contents to a file
      * Useful for debugging purposes.

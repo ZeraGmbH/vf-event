@@ -14,7 +14,7 @@ namespace VeinEvent
    * @brief A simple event handler
    * @note if you want to capture events, eg. for replay, please note that the QEvent::type (see http://doc.qt.io/qt-5/qevent.html#type) of most events is not initialized in a deterministic manner
    * @todo multithreading support
-   * @todo maybe implement specialized groups of systems with the strategy pattern
+   * @todo maybe implement specialized groups of systems with the strategy pattern, or in a hash table with QEvent::type() as key
    */
   class VEINEVENTSHARED_EXPORT EventHandler : public QObject
   {
