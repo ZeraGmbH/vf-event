@@ -18,6 +18,9 @@ HEADERS +=\
     ve_commandevent.h \
     ve_validator.h
 
+#dependencies
+VEIN_DEP_HELPER = 1
+
 exists( ../../project-paths.pri ) {
   include(../../project-paths.pri)
 }

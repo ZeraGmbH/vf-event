@@ -44,6 +44,7 @@ namespace VeinEvent
   signals:
     void subsystemsChanged(QList<EventSystem*> t_subsystems);
 
+    //QObject interface
   protected:
     void customEvent(QEvent *t_event) override;
 

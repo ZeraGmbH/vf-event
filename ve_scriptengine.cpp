@@ -9,12 +9,12 @@ namespace VeinEvent
   AbstractScriptEngine::AbstractScriptEngine(QObject *t_parent) :
     EventSystem(t_parent)
   {
-    qCDebug(VEIN_SCRIPTEVENT) << "Created script system";
+    vCDebug(VEIN_SCRIPTEVENT) << "Created script system";
   }
 
   AbstractScriptEngine::~AbstractScriptEngine()
   {
-    qCDebug(VEIN_SCRIPTEVENT) << "Destroyed script system";
+    vCDebug(VEIN_SCRIPTEVENT) << "Destroyed script system";
 
     /// @note Qt parent system deletes the m_engine automagical
   }

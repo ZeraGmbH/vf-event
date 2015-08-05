@@ -2,14 +2,14 @@
 
 #include "ve_eventsystem.h"
 #include <QEvent>
-#include <QLoggingCategory>
+#include "vh_logging.h"
 
 namespace VeinEvent
 {
   EventHandler::EventHandler(QObject *t_parent) :
     QObject(t_parent)
   {
-    qCDebug(VEIN_EVENT) << "Created event handler";
+    vCDebug(VEIN_EVENT) << "Created event handler";
   }
 
   bool EventHandler::eventTerminationEnabled() const

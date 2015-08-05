@@ -1,5 +1,5 @@
 #include "ve_storagesystem.h"
-#include <QLoggingCategory>
+#include "vh_logging.h"
 
 Q_LOGGING_CATEGORY(VEIN_STORAGE, "\033[1;36m<Vein.Storage>\033[0m")
 

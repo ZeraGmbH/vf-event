@@ -75,6 +75,9 @@ namespace VeinEvent
     virtual bool initializeData(const QUrl &t_sourceUrl)=0;
 
   private:
+    /**
+     * @todo add a consecutive tracking variable that cannot overflow and recycles unused numbers
+     */
     static int m_entityIdNext;
   };
 }

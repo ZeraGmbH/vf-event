@@ -1,6 +1,6 @@
 #include "ve_eventsystem.h"
 #include "ve_eventhandler.h"
-#include <QLoggingCategory>
+#include "vh_logging.h"
 #include <QCoreApplication>
 
 Q_LOGGING_CATEGORY(VEIN_EVENT, VEIN_DEBUGNAME_EVENT)

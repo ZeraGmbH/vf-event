@@ -31,7 +31,7 @@ namespace VeinEvent
             cEvent->eventData()->setEventOrigin(EventData::EventOrigin::EO_LOCAL); //the validated answer is authored from the system that runs the validator (aka. this system)
             cEvent->eventData()->setEventTarget(EventData::EventTarget::ET_ALL); //inform all users (may or may not result in network messages)
 
-            qCDebug(VEIN_EVENT) << "Translated transaction event:" << cEvent << "into a notification event";
+            vCDebug(VEIN_EVENT) << "Translated transaction event:" << cEvent << "into a notification event";
             break;
           }
           default:
