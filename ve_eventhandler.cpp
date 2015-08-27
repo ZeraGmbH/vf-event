@@ -44,7 +44,7 @@ namespace VeinEvent
   {
     /** @todo maybe event processing can be accelerated with QtConcurrent? */
 
-    for(int i=0; i <m_subsystems.count() && t_event->isAccepted()==false; i++)
+    for(int i=0; i < m_subsystems.count() && t_event->isAccepted()==false; ++i)
     {
       m_subsystems.at(i)->processEvent(t_event);
     }

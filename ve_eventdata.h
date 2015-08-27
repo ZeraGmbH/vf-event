@@ -33,7 +33,7 @@ namespace VeinEvent
     EventTarget eventTarget() const;
     void setEventTarget(EventTarget t_eventTarget);
 
-    virtual int type() =0;
+    virtual int type() const =0;
 
     virtual bool isValid() const;
 
