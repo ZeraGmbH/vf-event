@@ -49,11 +49,10 @@ namespace VeinEvent
     virtual bool hasStoredValue(int t_entityId, const QString &t_componentName) const =0;
 
     /**
-     * @brief Stores the data of an entity in a QHash dataform
-     * @param entityId
-     * @return The returned values may or may not be synced with the current values depending on the implementation
+     * @brief Retrieves a list of the components from entity t_entityId
+     * @return
      */
-    virtual const QHash<QString, QVariant> *getEntityDataCopy(int t_entityId) const =0; ///< @todo check if this function violates the class enclosure
+    virtual QList<QString> getEntityComponents(int t_entityId) const =0;
     virtual bool hasEntity(int t_entityId) const =0;
 
     virtual QList<int> getEntityList() const =0;
