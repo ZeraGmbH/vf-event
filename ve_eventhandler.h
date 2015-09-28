@@ -46,7 +46,7 @@ namespace VeinEvent
 
     //QObject interface
   protected:
-    void customEvent(QEvent *t_event) override;
+    virtual void customEvent(QEvent *t_event) override;
 
   private:
     /**
