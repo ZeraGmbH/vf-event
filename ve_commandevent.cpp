@@ -24,10 +24,6 @@ namespace VeinEvent
 
   int CommandEvent::eventType()
   {
-    if(m_eventType==0)
-    {
-      m_eventType = QEvent::registerEventType();
-    }
     return m_eventType;
   }
 
@@ -59,5 +55,5 @@ namespace VeinEvent
     return m_eventData;
   }
 
-  int CommandEvent::m_eventType =0;
+  const int CommandEvent::m_eventType = QEvent::registerEventType();
 }
