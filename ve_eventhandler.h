@@ -6,12 +6,15 @@
 #include <QObject>
 #include <QList>
 
+/**
+ * @brief Namespace for systems based on custom QEvent handling
+ */
 namespace VeinEvent
 {
   class EventSystem;
 
   /**
-   * @brief A simple event handler
+   * @brief A simple event handler for QEvent based types, operates with VeinEvent::EventSystem
    * @note if you want to capture events, eg. for replay, please note that the QEvent::type (see http://doc.qt.io/qt-5/qevent.html#type) of most events is not initialized in a deterministic manner
    * @todo multithreading support
    * @todo maybe implement specialized groups of systems with the strategy pattern, or in a hash table with QEvent::type() as key

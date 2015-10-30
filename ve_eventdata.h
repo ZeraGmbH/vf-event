@@ -8,7 +8,7 @@
 namespace VeinEvent
 {
   /**
-   * @brief The data of CommandEvent designed like the Command pattern from the GoF book
+   * @brief The data representing component and entity changes, designed like the Command pattern from the GoF book
    */
   class VEINEVENTSHARED_EXPORT EventData
   {

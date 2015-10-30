@@ -4,6 +4,20 @@
 #include <QtCore/qglobal.h>
 #include "vh_logging.h"
 
+/*! \mainpage Vein Framework
+ *
+ * \section Introduction
+ *
+ * Event based Entity Component System implementation (ECS)
+ *
+ * https://bitbucket.org/gen_dev_sst/vein-framework
+ *
+ * \section Download
+ *
+ * ssh://git\@bitbucket.org:gen_dev_sst/vein-framework.git
+ *
+ */
+
 Q_DECLARE_LOGGING_CATEGORY(VEIN_EVENT)
 Q_DECLARE_LOGGING_CATEGORY(VEIN_SCRIPTEVENT)
 

@@ -9,6 +9,7 @@ namespace VeinEvent
 {
   /**
    * @brief A basic validator that intercepts transactions and turns them into notifications
+   *
    * The default implementation may be too simple in most usecases
    * Converts the given event of type CommandEvent with subtype "transaction" into subtype "notification"
    * Validators in general should consume invalid events via QEvent::accept to prevent propagation to other event systems

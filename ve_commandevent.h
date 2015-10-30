@@ -1,5 +1,5 @@
-#ifndef VE_TRANSACTIONEVENT_H
-#define VE_TRANSACTIONEVENT_H
+#ifndef VE_COMMANDEVENT_H
+#define VE_COMMANDEVENT_H
 
 #include "vein-event_global.h"
 
@@ -10,6 +10,9 @@ namespace VeinEvent
 {
   class EventData;
 
+  /**
+   * @brief The CommandEvent class is a container for component and entity changes
+   */
   class VEINEVENTSHARED_EXPORT CommandEvent : public QEvent
   {
   public:
@@ -34,7 +37,7 @@ namespace VeinEvent
 
     /**
      * @brief eventData
-     * @return do not use the pointer in a contex where it could be deleted, failing to do so will result in a double delete segfault
+     * @return do not use the pointer in a context where it could be deleted, failing to do so will result in a double delete segfault
      */
     EventData *eventData();
 
@@ -61,4 +64,4 @@ namespace VeinEvent
     EventData *m_eventData;
   };
 }
-#endif // VE_TRANSACTIONEVENT_H
+#endif // VE_COMMANDEVENT_H

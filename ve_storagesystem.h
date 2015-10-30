@@ -10,7 +10,7 @@ Q_DECLARE_LOGGING_CATEGORY(VEIN_STORAGE)
 namespace VeinEvent
 {
   /**
-   * @brief The StorageSystem abstracts away implementation details of storage solutions such as databases
+   * @brief Interface to stores entity/component data, abstracts away implementation details of the underlying storage
    */
   class VEINEVENTSHARED_EXPORT StorageSystem : public EventSystem
   {
