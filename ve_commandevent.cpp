@@ -4,14 +4,16 @@
 namespace VeinEvent
 {
 
-  CommandEvent::CommandEvent(EventSubtype subtype, EventData *data) :
+  CommandEvent::CommandEvent(EventSubtype t_subtype, EventData *t_data) :
     QEvent(static_cast<QEvent::Type>(eventType())),
-    m_subtype(subtype),
-    m_eventData(data)
+    m_subtype(t_subtype),
+    m_eventData(t_data)
   {
-    if(data->isValid() == false)
+    Q_ASSERT(t_data != 0);
+
+    if(t_data->isValid() == false)
     {
-      qCWarning(VEIN_EVENT) << "Invalid event data" << data;
+      qCWarning(VEIN_EVENT) << "Invalid event data" << t_data;
     }
     this->setAccepted(false);
   }
@@ -32,12 +34,11 @@ namespace VeinEvent
     return m_peerId;
   }
 
-  void CommandEvent::setPeerId(int pPeerId)
+  void CommandEvent::setPeerId(int t_pPeerId)
   {
-    if(pPeerId >= 0)
-    {
-      m_peerId = pPeerId;
-    }
+    VF_ASSERT(t_pPeerId >= 0, "Peer id must be >= 0");
+
+    m_peerId = t_pPeerId;
   }
 
   CommandEvent::EventSubtype CommandEvent::eventSubtype() const
@@ -45,9 +46,9 @@ namespace VeinEvent
     return m_subtype;
   }
 
-  void CommandEvent::setEventSubtype(CommandEvent::EventSubtype newType)
+  void CommandEvent::setEventSubtype(CommandEvent::EventSubtype t_newType)
   {
-    m_subtype = newType;
+    m_subtype = t_newType;
   }
 
   EventData *CommandEvent::eventData()

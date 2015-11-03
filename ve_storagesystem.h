@@ -41,8 +41,8 @@ namespace VeinEvent
 
     /**
      * @brief Execution speed depends on the implementation
-     * @param entityId
-     * @param component
+     * @param t_entityId
+     * @param t_componentName
      * @return May be invalid if no data is found / or the storage is not accessible
      */
     virtual QVariant getStoredValue(int t_entityId, const QString &t_componentName) const =0;
@@ -61,14 +61,14 @@ namespace VeinEvent
      * @brief Causes a StorageType specific dump of the storage contents to a file
      * Useful for debugging purposes.
      *
-     * @param fPath file path for the dump
-     * @param overwrite overwrites existing files if set to true
+     * @param t_fileDevice file path for the dump
+     * @param t_overwrite overwrites existing files if set to true
      */
     virtual void dumpToFile(QIODevice *t_fileDevice, bool t_overwrite=false) const=0;
 
     /**
      * @brief Optional function that sets up the storage
-     * @param sourceUrl
+     * @param t_sourceUrl
      * @return success indicator
      */
     virtual bool initializeData(const QUrl &t_sourceUrl)=0;
