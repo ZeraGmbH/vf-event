@@ -15,14 +15,14 @@ namespace VeinEvent
 
   void EventSystem::attach(EventHandler *t_eventHandler)
   {
-    if(m_attached == false)
+    Q_ASSERT(t_eventHandler != 0);
+    VF_ASSERT(m_attached == false, "EventSystem already attached");
+
+    QObject::connect(this,&VeinEvent::EventSystem::sigSendEvent,[=](QEvent *ev)
     {
-      QObject::connect(this,&VeinEvent::EventSystem::sigSendEvent,[=](QEvent *ev)
-      {
-        /// @todo add multithreaded event sending support
-        QCoreApplication::instance()->postEvent(t_eventHandler, ev);
-      });
-      m_attached = true;
-    }
+      /// @todo add multithreaded event sending support
+      QCoreApplication::instance()->postEvent(t_eventHandler, ev);
+    });
+    m_attached = true;
   }
 }
