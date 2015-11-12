@@ -10,11 +10,10 @@
  *
  * Event based Entity Component System implementation (ECS)
  *
- * https://bitbucket.org/gen_dev_sst/vein-framework
  *
  * \section Download
  *
- * ssh://git\@bitbucket.org:gen_dev_sst/vein-framework.git
+ * git clone ssh://git@s-zera-source01/~/soc/libs/vein-framework/vein-framework.git && ./scripts/setup-git-zera.sh
  *
  */
 
