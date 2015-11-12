@@ -18,25 +18,4 @@ namespace VeinEvent
 
     /// @note Qt parent system deletes the m_engine automagical
   }
-
-
-  QString AbstractScriptEngine::loadScript(QIODevice &t_device)
-  {
-    QString retVal;
-    if(t_device.isOpen() == false)
-    {
-      t_device.open(QFile::ReadOnly);
-    }
-
-    if(t_device.isReadable())
-    {
-      retVal = QString::fromUtf8(t_device.readAll());
-    }
-    else
-    {
-      //warning
-    }
-    t_device.close();
-    return retVal;
-  }
 }

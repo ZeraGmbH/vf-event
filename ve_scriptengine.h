@@ -30,13 +30,11 @@ namespace VeinEvent
     virtual void removeScript(int t_orderId)=0;
     virtual void clearScripts()=0;
 
-  protected:
     /**
      * @brief Loads the script from the QIODevice if it is readable
-     * @param t_device As QIODevice anything could be inserted here (QFile, QByteArray via QBuffer...)
-     * @return script in String form
+     * @param t_url url pointing to the script file
      */
-    virtual QString loadScript(QIODevice &t_device) final;
+    virtual void loadScript(QUrl &t_url) =0;
 
   };
 }
