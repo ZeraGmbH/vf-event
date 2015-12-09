@@ -13,7 +13,11 @@
  *
  * \section Download
  *
- * git clone ssh://git@s-zera-source01/~/soc/libs/vein-framework/vein-framework.git && ./scripts/setup-git-zera.sh
+ * git clone ssh://git@s-zera-source01/~/soc/libs/vein-framework/vein-framework.git
+ *
+ * \section Initialization
+ *
+ * cd vein-framework && ./scripts/setup-git-zera.sh
  *
  */
 
