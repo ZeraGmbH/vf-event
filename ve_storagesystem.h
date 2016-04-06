@@ -7,6 +7,10 @@
 
 Q_DECLARE_LOGGING_CATEGORY(VEIN_STORAGE)
 
+QT_BEGIN_NAMESPACE
+class QFile;
+QT_END_NAMESPACE
+
 namespace VeinEvent
 {
   /**
@@ -61,10 +65,11 @@ namespace VeinEvent
      * @brief Causes a StorageType specific dump of the storage contents to a file
      * Useful for debugging purposes.
      *
+     * @note The file type is an implementation detail that is independent of any file extensions
      * @param t_fileDevice file path for the dump
      * @param t_overwrite overwrites existing files if set to true
      */
-    virtual void dumpToFile(QIODevice *t_fileDevice, bool t_overwrite=false) const=0;
+    virtual void dumpToFile(QFile *t_fileDevice, bool t_overwrite=false) const=0;
 
     /**
      * @brief Optional function that sets up the storage
