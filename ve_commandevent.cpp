@@ -51,7 +51,7 @@ namespace VeinEvent
     m_subtype = t_newType;
   }
 
-  EventData *CommandEvent::eventData()
+  EventData *CommandEvent::eventData() const
   {
     return m_eventData;
   }

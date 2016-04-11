@@ -39,7 +39,7 @@ namespace VeinEvent
      * @brief eventData
      * @return do not use the pointer in a context where it could be deleted, failing to do so will result in a double delete segfault
      */
-    EventData *eventData();
+    EventData *eventData() const;
 
   private:
     /**
