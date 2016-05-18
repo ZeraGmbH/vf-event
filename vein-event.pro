@@ -21,6 +21,8 @@ HEADERS +=\
 #dependencies
 VEIN_DEP_HELPER = 1
 
+public_headers.files = $$HEADERS
+
 exists( ../../vein-framework.pri ) {
   include(../../vein-framework.pri)
 }
