@@ -43,7 +43,10 @@ namespace VeinEvent
   void EventHandler::customEvent(QEvent *t_event)
   {
     Q_ASSERT(t_event != 0);
-    /** @todo maybe event processing can be accelerated with QtConcurrent / OpenMP? */
+    /**
+     * @note some speed could be gained by using a subscription based n:m (entity:system) mapping so that systems only get notified about the entities they care about
+     * @todo maybe event processing can be accelerated with QtConcurrent / OpenMP?
+     */
 
     for(int i=0; i < m_subsystems.count() && t_event->isAccepted()==false; ++i)
     {
