@@ -82,7 +82,7 @@ namespace VeinEvent
     /**
      * @todo add a consecutive tracking variable that cannot overflow and recycles unused numbers
      */
-    static int m_entityIdNext;
+    static int s_entityIdNext;
   };
 }
 

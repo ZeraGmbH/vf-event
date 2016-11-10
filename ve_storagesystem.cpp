@@ -12,8 +12,8 @@ namespace VeinEvent
 
   int StorageSystem::getNextEntityId()
   {
-    return ++m_entityIdNext;
+    return ++s_entityIdNext;
   }
 
-  int StorageSystem::m_entityIdNext=0;
+  int StorageSystem::s_entityIdNext=0;
 }
