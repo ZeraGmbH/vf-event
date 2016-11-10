@@ -26,7 +26,7 @@ namespace VeinEvent
 
   int CommandEvent::eventType()
   {
-    return m_eventType;
+    return s_eventType;
   }
 
   int CommandEvent::peerId() const
@@ -56,5 +56,5 @@ namespace VeinEvent
     return m_eventData;
   }
 
-  const int CommandEvent::m_eventType = QEvent::registerEventType();
+  const int CommandEvent::s_eventType = QEvent::registerEventType();
 }

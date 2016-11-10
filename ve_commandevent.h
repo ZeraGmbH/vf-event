@@ -45,7 +45,7 @@ namespace VeinEvent
     /**
      * @brief 'Randomly' assigned static event type (QEvent::Type)
      */
-    static const int m_eventType;
+    static const int s_eventType;
 
     /**
      * @brief Depending on the context of the event this may be the sender or receiver of the event, defaults to -1
