@@ -32,7 +32,8 @@ namespace VeinEvent
     if(m_subsystems!=t_subsystems)
     {
       m_subsystems = t_subsystems;
-      foreach (EventSystem *tmpSystem, m_subsystems) {
+      for(EventSystem *tmpSystem : m_subsystems)
+      {
         tmpSystem->attach(this);
       }
       emit subsystemsChanged(t_subsystems);
