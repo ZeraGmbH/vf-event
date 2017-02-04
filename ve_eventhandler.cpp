@@ -4,6 +4,10 @@
 #include <QEvent>
 #include "vh_logging.h"
 
+#include <QCoreApplication>
+#include <QList>
+#include <QDataStream>
+
 namespace VeinEvent
 {
   EventHandler::EventHandler(QObject *t_parent) :
@@ -59,4 +63,15 @@ namespace VeinEvent
       t_event->accept();
     }
   }
+
+  void registerStreamOperators()
+  {
+    qRegisterMetaTypeStreamOperators<QList<double> >("QList<double>");
+    qRegisterMetaTypeStreamOperators<QList<int> >("QList<int>");
+    qRegisterMetaTypeStreamOperators<QList<QString> >("QList<QString>");
+    qRegisterMetaTypeStreamOperators<QVariantMap>("QVariantMap");
+    qRegisterMetaTypeStreamOperators<QVariantList>("QVariantList");
+  }
+
+  Q_COREAPP_STARTUP_FUNCTION(registerStreamOperators)
 }
