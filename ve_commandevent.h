@@ -19,7 +19,7 @@ namespace VeinEvent
     /**
      * @brief The EventSubtype enum provides information about the authoritative status of the event
      */
-    enum class EventSubtype : qint8 {
+    enum class EventSubtype : int {
       NOTIFICATION = 0, /**< The event meets the authoritative requirements (if any) */
       TRANSACTION = 1 /**< The event requires to be inspected about its authoritative status */
     };
