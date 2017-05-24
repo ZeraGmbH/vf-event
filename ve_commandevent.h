@@ -50,6 +50,7 @@ namespace VeinEvent
     /**
      * @brief Depending on the context of the event this may be the sender or receiver of the event, defaults to -1
      * @note Validator may use this data to check for permissions, an introspection system may use this data for sender/receiver addressing
+     * @note The id -1 is not transferred over the network as no client can possible obtain that id so it can be also used for local communication
      */
     int m_peerId = -1;
 

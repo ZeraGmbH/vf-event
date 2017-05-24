@@ -36,7 +36,7 @@ namespace VeinEvent
 
   void CommandEvent::setPeerId(int t_pPeerId)
   {
-    VF_ASSERT(t_pPeerId >= 0, "Peer id must be >= 0");
+    //VF_ASSERT(t_pPeerId >= 0, "Peer id must be >= 0"); //t_pPeerId < 0 is valid but can't be sent over the network
 
     m_peerId = t_pPeerId;
   }

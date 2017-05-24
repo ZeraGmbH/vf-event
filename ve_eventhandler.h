@@ -28,6 +28,7 @@ namespace VeinEvent
 
   public:
     explicit EventHandler(QObject *t_parent=0);
+    ~EventHandler() {}
 
     bool eventTerminationEnabled() const;
 
