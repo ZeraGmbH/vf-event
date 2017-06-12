@@ -40,7 +40,16 @@ namespace VeinEvent
       {
         tmpSystem->attach(this);
       }
-      emit subsystemsChanged(t_subsystems);
+      emit subsystemsChanged(m_subsystems);
+    }
+  }
+
+  void EventHandler::clearSubsystems()
+  {
+    if(m_subsystems.isEmpty() == false)
+    {
+      m_subsystems.clear();
+      emit subsystemsChanged(m_subsystems);
     }
   }
 
