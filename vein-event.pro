@@ -13,7 +13,6 @@ HEADERS +=\
     ve_eventsystem.h \
     ve_eventhandler.h \
     ve_storagesystem.h \
-    ve_scriptengine.h \
     ve_eventdata.h \
     ve_commandevent.h \
     ve_validator.h
@@ -35,7 +34,6 @@ SOURCES += \
     ve_eventsystem.cpp \
     ve_eventhandler.cpp \
     ve_storagesystem.cpp \
-    ve_scriptengine.cpp \
     ve_eventdata.cpp \
     ve_commandevent.cpp \
     ve_validator.cpp
