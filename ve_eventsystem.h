@@ -42,6 +42,10 @@ namespace VeinEvent
      * @param t_event
      */
     void sigSendEvent(QEvent *t_event);
+    /**
+     * @brief Is called when the system is attached to an EventHandler
+     */
+    void sigAttached();
 
   private:
     bool m_attached = false;

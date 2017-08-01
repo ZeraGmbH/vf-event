@@ -24,5 +24,6 @@ namespace VeinEvent
       QCoreApplication::instance()->postEvent(t_eventHandler, ev);
     });
     m_attached = true;
+    emit sigAttached();
   }
 }
