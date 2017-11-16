@@ -10,6 +10,7 @@ namespace VeinEvent
     m_eventData(t_data)
   {
     Q_ASSERT(t_data != 0);
+    Q_ASSERT(t_data->entityId() >= 0);
 
     if(t_data->isValid() == false)
     {
