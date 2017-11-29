@@ -5,6 +5,7 @@
 
 #include <QEvent>
 #include <QVariant>
+#include <QUuid>
 
 namespace VeinEvent
 {
@@ -29,8 +30,8 @@ namespace VeinEvent
 
     static int eventType();
 
-    int peerId() const;
-    void setPeerId(int t_pPeerId);
+    QUuid peerId() const;
+    void setPeerId(QUuid t_pPeerId);
 
     EventSubtype eventSubtype() const;
     void setEventSubtype(EventSubtype t_newType);
@@ -52,7 +53,7 @@ namespace VeinEvent
      * @note Validator may use this data to check for permissions, an introspection system may use this data for sender/receiver addressing
      * @note The id -1 is not transferred over the network as no client can possible obtain that id so it can be also used for local communication
      */
-    int m_peerId = -1;
+    QUuid m_peerId;
 
     /**
      * @brief The authoritative status of the event
