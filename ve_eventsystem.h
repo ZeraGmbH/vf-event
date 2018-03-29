@@ -19,7 +19,7 @@ namespace VeinEvent
     Q_OBJECT
 
   public:
-    explicit EventSystem(QObject *t_parent=0);
+    explicit EventSystem(QObject *t_parent=nullptr);
     ~EventSystem() {}
 
     /**
