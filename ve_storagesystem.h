@@ -20,7 +20,7 @@ namespace VeinEvent
   {
     Q_OBJECT
   public:
-    explicit StorageSystem(QObject *t_parent=0);
+    explicit StorageSystem(QObject *t_parent=nullptr);
 
     /**
      * @brief getNextEntityId

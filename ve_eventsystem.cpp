@@ -15,7 +15,7 @@ namespace VeinEvent
 
   void EventSystem::attach(EventHandler *t_eventHandler)
   {
-    Q_ASSERT(t_eventHandler != 0);
+    Q_ASSERT(t_eventHandler != nullptr);
     VF_ASSERT(m_attached == false, "EventSystem already attached");
 
     QObject::connect(this,&VeinEvent::EventSystem::sigSendEvent,[=](QEvent *ev)

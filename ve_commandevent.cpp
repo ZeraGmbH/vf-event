@@ -9,7 +9,7 @@ namespace VeinEvent
     m_subtype(t_subtype),
     m_eventData(t_data)
   {
-    Q_ASSERT(t_data != 0);
+    Q_ASSERT(t_data != nullptr);
     Q_ASSERT(t_data->entityId() >= 0);
 
     if(t_data->isValid() == false)

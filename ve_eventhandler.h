@@ -27,7 +27,7 @@ namespace VeinEvent
     Q_PROPERTY(QList<EventSystem*> subsystems READ subsystems WRITE setSubsystems NOTIFY subsystemsChanged)
 
   public:
-    explicit EventHandler(QObject *t_parent=0);
+    explicit EventHandler(QObject *t_parent=nullptr);
     ~EventHandler() {m_subsystems.clear();}
 
     bool eventTerminationEnabled() const;

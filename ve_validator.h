@@ -18,7 +18,7 @@ namespace VeinEvent
   {
     Q_OBJECT
   public:
-    explicit Validator(QObject *t_parent = 0);
+    explicit Validator(QObject *t_parent = nullptr);
 
     // EventSystem interface
   public:

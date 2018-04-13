@@ -18,13 +18,13 @@ namespace VeinEvent
 
     if(t_event->type() == CommandEvent::eventType())
     {
-      CommandEvent *cEvent = 0;
-      EventData *evData = 0;
+      CommandEvent *cEvent = nullptr;
+      EventData *evData = nullptr;
       cEvent = static_cast<VeinEvent::CommandEvent *>(t_event);
-      Q_ASSERT(cEvent != 0);
+      Q_ASSERT(cEvent != nullptr);
 
       evData = cEvent->eventData();
-      Q_ASSERT(evData != 0);
+      Q_ASSERT(evData != nullptr);
 
       switch(cEvent->eventSubtype())
       {
