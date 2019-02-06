@@ -44,6 +44,7 @@ namespace VeinEvent
      * @warning the EventHandler is not responsible for deleting subsystems
      */
     void setSubsystems(QList<EventSystem*> t_subsystems);
+    void addSubsystem(EventSystem* t_subsystem);
 
     void clearSubsystems();
 

@@ -44,6 +44,14 @@ namespace VeinEvent
     }
   }
 
+  void EventHandler::addSubsystem(EventSystem *t_subsystem)
+  {
+    Q_ASSERT(m_subsystems.contains(t_subsystem) == false);
+    m_subsystems.append(t_subsystem);
+    t_subsystem->attach(this);
+    emit subsystemsChanged(m_subsystems);
+  }
+
   void EventHandler::clearSubsystems()
   {
     if(m_subsystems.isEmpty() == false)
