@@ -18,7 +18,8 @@ namespace VeinEvent
 
     enum class EventOrigin : qint8 {
       EO_LOCAL = 0, /**< the event is from the local system and generally trustworthy */
-      EO_FOREIGN = 1 /**< the event is from a remote client or generally untrustworthy */
+      EO_FOREIGN = 1, /**< the event is from a remote client or generally untrustworthy */
+      EO_USER_DEFINED = 64 /**< the event is from a user defined origin if >= EO_USER_DEFINED */
     };
 
     EventOrigin eventOrigin() const;
@@ -27,7 +28,8 @@ namespace VeinEvent
     enum class EventTarget : qint8 {
       ET_IRRELEVANT = 0, /**< the target is irrelevant for incoming remote events */
       ET_LOCAL = 1, /**< flags that the event should not be transmitted over the network border */
-      ET_ALL = 2 /**< the event can be transmitted freely */
+      ET_ALL = 2, /**< the event can be transmitted freely */
+      ET_USER_DEFINED = 64 /**< the event is for a user defined target if >= ET_USER_DEFINED */
     };
 
     EventTarget eventTarget() const;
