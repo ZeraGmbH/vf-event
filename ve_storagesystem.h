@@ -22,14 +22,6 @@ namespace VeinEvent
   public:
     explicit StorageSystem(QObject *t_parent=nullptr);
 
-    /**
-     * @brief getNextEntityId
-     * @return
-     * @todo change the implementation, suggested is something like: https://github.com/SuperV1234/SSVUtils/blob/master/include/SSVUtils/HandleVector/HandleVector.hpp
-     * @warning not thread safe
-     */
-    static int getNextEntityId();
-
     enum StorageType {
       MEMORY_STORAGE = 0, /**< like a QHash or an in memory SQLITE DB */
       FILE_STORAGE = 1, /**< like a JSON file or a SQLITE file DB */
@@ -77,12 +69,6 @@ namespace VeinEvent
      * @return success indicator
      */
     virtual bool initializeData(const QUrl &t_sourceUrl)=0;
-
-  private:
-    /**
-     * @todo add a consecutive tracking variable that cannot overflow and recycles unused numbers
-     */
-    static int s_entityIdNext;
   };
 }
 

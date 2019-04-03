@@ -7,11 +7,4 @@ namespace VeinEvent
     EventSystem(t_parent)
   {
   }
-
-  int StorageSystem::getNextEntityId()
-  {
-    return ++s_entityIdNext;
-  }
-
-  int StorageSystem::s_entityIdNext=0;
 }
