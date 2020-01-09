@@ -1,7 +1,8 @@
 #ifndef EVENTSYSTEM_H
 #define EVENTSYSTEM_H
 
-#include "vein-event_global.h"
+#include "vfevent_export.h"
+#include "globalIncludes.h"
 #include <QObject>
 
 class QEvent;
@@ -14,7 +15,7 @@ namespace VeinEvent
    * @note if you want to capture events, eg. for replay, please note that the QEvent::type (see http://doc.qt.io/qt-5/qevent.html#type) of most events is not initialized in a deterministic manner
    * @todo idea: add template specialized objects that handle one particular type of event via lambda infused code
    */
-  class VEINEVENTSHARED_EXPORT EventSystem : public QObject
+  class VFEVENT_EXPORT EventSystem : public QObject
   {
     Q_OBJECT
 

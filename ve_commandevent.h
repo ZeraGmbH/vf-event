@@ -1,7 +1,8 @@
 #ifndef VE_COMMANDEVENT_H
 #define VE_COMMANDEVENT_H
 
-#include "vein-event_global.h"
+#include "vfevent_export.h"
+#include "globalIncludes.h"
 
 #include <QEvent>
 #include <QVariant>
@@ -14,7 +15,7 @@ namespace VeinEvent
   /**
    * @brief The CommandEvent class is a container for component and entity changes
    */
-  class VEINEVENTSHARED_EXPORT CommandEvent : public QEvent
+  class VFEVENT_EXPORT CommandEvent : public QEvent
   {
   public:
     /**

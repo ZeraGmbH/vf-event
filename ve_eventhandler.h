@@ -1,8 +1,8 @@
 #ifndef VEINEVENTHANDLER_H
 #define VEINEVENTHANDLER_H
 
-#include "vein-event_global.h"
-
+#include "vfevent_export.h"
+#include "globalIncludes.h"
 #include <QObject>
 #include <QList>
 
@@ -19,7 +19,7 @@ namespace VeinEvent
    * @todo multithreading support
    * @todo maybe implement specialized groups of systems with the strategy pattern, or in a hash table with QEvent::type() as key
    */
-  class VEINEVENTSHARED_EXPORT EventHandler : public QObject
+  class VFEVENT_EXPORT EventHandler : public QObject
   {
     Q_OBJECT
 

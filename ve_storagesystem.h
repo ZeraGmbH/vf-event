@@ -1,7 +1,9 @@
 #ifndef STORAGESYSTEM_H
 #define STORAGESYSTEM_H
 
-#include "vein-event_global.h"
+#include "globalIncludes.h"
+
+#include "vfevent_export.h"
 
 #include "ve_eventsystem.h"
 
@@ -16,7 +18,7 @@ namespace VeinEvent
   /**
    * @brief Interface to stores entity/component data, abstracts away implementation details of the underlying storage
    */
-  class VEINEVENTSHARED_EXPORT StorageSystem : public EventSystem
+  class VFEVENT_EXPORT StorageSystem : public EventSystem
   {
     Q_OBJECT
   public:

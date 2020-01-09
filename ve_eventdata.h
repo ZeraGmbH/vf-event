@@ -1,8 +1,8 @@
 #ifndef VEINEVENT_VE_EVENTDATA_H
 #define VEINEVENT_VE_EVENTDATA_H
 
-#include "vein-event_global.h"
-
+#include "vfevent_export.h"
+#include "globalIncludes.h"
 #include <QByteArray>
 
 namespace VeinEvent
@@ -10,7 +10,7 @@ namespace VeinEvent
   /**
    * @brief The data representing component and entity changes, designed like the Command pattern from the GoF book
    */
-  class VEINEVENTSHARED_EXPORT EventData
+  class VFEVENT_EXPORT EventData
   {
   public:
     EventData();

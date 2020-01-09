@@ -1,8 +1,8 @@
 #ifndef VEINEVENT_VE_VALIDATOR_H
 #define VEINEVENT_VE_VALIDATOR_H
 
-#include "vein-event_global.h"
-
+#include "vfevent_export.h"
+#include "globalIncludes.h"
 #include "ve_eventsystem.h"
 
 namespace VeinEvent
@@ -14,7 +14,7 @@ namespace VeinEvent
    * Converts the given event of type CommandEvent with subtype "transaction" into subtype "notification"
    * Validators in general should consume invalid events via QEvent::accept to prevent propagation to other event systems
    */
-  class VEINEVENTSHARED_EXPORT Validator : public EventSystem
+  class VFEVENT_EXPORT Validator : public EventSystem
   {
     Q_OBJECT
   public:
