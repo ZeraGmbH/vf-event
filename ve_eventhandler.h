@@ -46,6 +46,8 @@ namespace VeinEvent
     void setSubsystems(QList<EventSystem*> t_subsystems);
     void addSubsystem(EventSystem* t_subsystem);
 
+    void removeSubsystem(EventSystem* t_subsystem);
+
     void clearSubsystems();
 
   signals:
