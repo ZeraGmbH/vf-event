@@ -52,6 +52,11 @@ namespace VeinEvent
     emit subsystemsChanged(m_subsystems);
   }
 
+  void EventHandler::removeSubsystem(EventSystem *t_subsystem)
+  {
+    m_subsystems.removeAll(t_subsystem);
+  }
+
   void EventHandler::clearSubsystems()
   {
     if(m_subsystems.isEmpty() == false)
